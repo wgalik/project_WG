@@ -23,7 +23,7 @@ let endDateValue = new Date().getTime();
 let result = 1;
 let index = 0;
 let orderBtn = document.querySelector("#orderBtn");
-endDateDiv.style.opacity = 0;
+
 
 startDate.addEventListener("change", function () {
   endDateDiv.style.opacity = 1;
@@ -35,6 +35,7 @@ currencyList.addEventListener("change", summaryByCurrency);
 orderBtn.addEventListener("click", orderConfirmation);
 
 window.addEventListener("load", function () {
+	endDateDiv.style.opacity = 0;
   axios({
     method: "GET",
     url: "http://api.nbp.pl/api/exchangerates/tables/a/today/?format=json",
