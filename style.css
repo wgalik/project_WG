@@ -94,14 +94,14 @@ ul li a:hover {
 }
 
 .img1 {
-  background-image: url(art-g5ec87181a_1920.jpg);
+  background-image: url(/art-g5ec87181a_1920\(1\).jpg);
 }
 .img2 {
-  background-image: url(devil-g8448eac5b_1920.jpg);
+  background-image: url(/devil-g8448eac5b_1920\(1\).jpg);
   animation-delay: 8s;
 }
 .img3 {
-  background-image: url(vases-gc217e1da8_1920.jpg);
+  background-image: url(/vases-gc217e1da8_1920\(1\).jpg);
   animation-delay: 16s;
 }
 
@@ -386,4 +386,49 @@ footer {
     flex-direction: column;
     align-content: space-evenly;
   }
+}
+
+/* ////////////// */
+#gallery {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+button.gallery {
+  background-color: transparent;
+  border: none;
+  font-family: Calibri;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px #ffffff;
+  font-size: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 5%;
+}
+button.gallery:nth-last-of-type(1) {
+  left: calc(95% - 100px);
+}
+
+button.gallery.back {
+  top: 2%;
+  left: calc(95% - 100px);
+}
+div.gallery.image {
+  position: static;
+  margin: 200px auto;
+  width: 75%;
+  height: 75%;
+  /* background-color: #e66900; */
+  /* border: 5px solid red; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

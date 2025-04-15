@@ -13,6 +13,11 @@ let cart_imgs = [];
 let cart_authors = [];
 let cart_titles = [];
 let cart_cost = [];
+let gallery = document.querySelector("#gallery");
+let galleryImage = document.querySelector(".image");
+let backButton = document.querySelector(".back");
+let prevButton = document.querySelector(".prev");
+let nextButton = document.querySelector(".next");
 
 btn.addEventListener("click", btnClickConfirm);
 
@@ -401,60 +406,102 @@ function show(x) {
   });
 }
 
+/////////////////////////////////////////////
+
 zoomIn.forEach((e, i) => {
   e.addEventListener("click", function () {
     if ((i === 0) ^ (i === 1)) {
-      let zoomIn1Img = document
-        .querySelector(".row1 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[0]}/full/843,/0/default.jpg)`;
     } else if ((i === 2) ^ (i === 3)) {
-      let zoomIn1Img = document
-        .querySelector(".row2 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[1]}/full/843,/0/default.jpg)`;
     } else if ((i === 4) ^ (i === 5)) {
-      let zoomIn1Img = document
-        .querySelector(".row3 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[2]}/full/843,/0/default.jpg)`;
     } else if ((i === 6) ^ (i === 7)) {
-      let zoomIn1Img = document
-        .querySelector(".row4 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[3]}/full/843,/0/default.jpg)`;
     } else if ((i === 8) ^ (i === 9)) {
-      let zoomIn1Img = document
-        .querySelector(".row5 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[4]}/full/843,/0/default.jpg)`;
     } else if ((i === 10) ^ (i === 11)) {
-      let zoomIn1Img = document
-        .querySelector(".row6 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[5]}/full/843,/0/default.jpg)`;
     } else if ((i === 12) ^ (i === 13)) {
-      let zoomIn1Img = document
-        .querySelector(".row7 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[6]}/full/843,/0/default.jpg)`;
     } else if ((i === 14) ^ (i === 15)) {
-      let zoomIn1Img = document
-        .querySelector(".row8 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[7]}/full/843,/0/default.jpg)`;
     } else if ((i === 16) ^ (i === 17)) {
-      let zoomIn1Img = document
-        .querySelector(".row9 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[8]}/full/843,/0/default.jpg)`;
     } else if ((i === 18) ^ (i === 19)) {
-      let zoomIn1Img = document
-        .querySelector(".row10 a #image")
-        .getAttribute("src");
-      window.open(zoomIn1Img);
+      gallery.style.display = "block";
+      galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[9]}/full/843,/0/default.jpg)`;
     }
   });
+});
+
+backButton.addEventListener("click", function () {
+  gallery.style.display = "none";
+});
+
+prevButton.addEventListener("click", function () {
+  let index = 0;
+
+  for (let i = 0; i <= imageID.length; i++) {
+    if (galleryImage.style.backgroundImage.includes(imageID[i])) {
+      nextButton.style.display = "block";
+      index = i;
+      break;
+    }
+  }
+  if (index === 0) {
+    prevButton.style.display = "none";
+    return;
+  }
+
+  index--;
+
+  galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[index]}/full/843,/0/default.jpg)`;
+
+  if (index === 0) {
+    prevButton.style.display = "none";
+  }
+
+  if (index >= 0) {
+    nextButton.style.display = "block";
+  }
+});
+
+nextButton.addEventListener("click", function () {
+  let index = 0;
+
+  for (let i = 0; i < imageID.length; i++) {
+    if (galleryImage.style.backgroundImage.includes(imageID[i])) {
+      index = i;
+      break;
+    }
+  }
+
+  if (index === imageID.length - 1) {
+    nextButton.style.display = "none";
+    return;
+  }
+
+  index++;
+
+  galleryImage.style.backgroundImage = `url(https://www.artic.edu/iiif/2/${imageID[index]}/full/843,/0/default.jpg)`;
+
+  if (index === imageID.length - 1) {
+    nextButton.style.display = "none";
+  }
+
+  if (index > 0) {
+    prevButton.style.display = "block";
+  }
 });
 
 cart.forEach((e, i) => {
