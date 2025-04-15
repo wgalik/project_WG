@@ -24,7 +24,6 @@ let result = 1;
 let index = 0;
 let orderBtn = document.querySelector("#orderBtn");
 
-
 startDate.addEventListener("change", function () {
   endDateDiv.style.opacity = 1;
   endDate.min = `${startDate.value}`;
@@ -35,10 +34,10 @@ currencyList.addEventListener("change", summaryByCurrency);
 orderBtn.addEventListener("click", orderConfirmation);
 
 window.addEventListener("load", function () {
-	endDateDiv.style.opacity = 0;
+  endDateDiv.style.opacity = 0;
   axios({
     method: "GET",
-    url: "http://api.nbp.pl/api/exchangerates/tables/a/today/?format=json",
+    url: "http://api.nbp.pl/api/exchangerates/tables/a/last/5/?format=json",
   })
     .then(function (response) {
       let currency = response.data[0].rates;
