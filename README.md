@@ -87,6 +87,66 @@ password: Admin1234
 
 ---
 
+# 🎨 Rent an Art – Art Rental Web App
+
+**Rent an Art** is a fictional web application developed as my graduation project. It focuses on designing a modern, clean, and fully functional frontend interface for an art rental service. The app is built entirely using HTML, CSS, and JavaScript – with no backend integration.
+
+## 🌐 Live Demo
+
+👉 [Click here to view the project](https://wgalik.github.io/project_WG/#)
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla JS)**
+- **DOM API**
+- **Bootstrap 5**
+- **jQuery** (Admin panel)
+
+---
+
+## 📦 Features
+
+- 🔍 Artwork search by tags
+- 🖼️ Enlarged image preview (lightbox)
+- 🛒 Add/remove items to/from cart
+- 💰 Dynamic rental cost calculation
+- ⌨️ Keyboard interaction (Enter to search)
+- 🔐 Simple admin panel (view/edit demo data)
+
+> **Admin Login:**  
+> Email: `admin@rentanart.com`  
+> Password: `Admin1234`
+
+---
+
+## 🎯 Project Goals
+
+- Build a visually appealing and user-friendly frontend interface
+- Practice clean code and semantic HTML structure
+- Demonstrate dynamic client-side functionality without using backend
+
+---
+
+## 🚧 Project Status
+
+- ✅ Finished
+- 📁 Non-commercial
+- 🧠 Educational (Graduation Project / Portfolio)
+
+---
+
+## 📬 Contact
+
+Feel free to reach out for collaborations or feedback:
+
+📧 [w.galik@poczta.fm](mailto:w.galik@poczta.fm)
+
+---
+
 
 ## 📬 Kontakt
 
