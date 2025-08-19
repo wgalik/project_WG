@@ -1,7 +1,11 @@
 
 # 🎨 Rent an Art – Art Rental Web App
 
-**Rent an Art** is a fictional web application developed as my graduation project. It focuses on designing a modern, clean, and fully functional frontend interface for an art rental service. The app is built entirely using HTML, CSS, and JavaScript – with no backend integration.
+**Rent an Art** is a fictional web application developed as a university diploma project.
+The main goal was to design an intuitive and visually appealing frontend for an art rental platform, built entirely with frontend technologies (HTML, CSS, JS) without the use of backend frameworks.
+The application leverages Local Storage to store user data such as the shopping cart and preferences, allowing the state to be preserved between sessions.
+
+This project is part of my frontend portfolio.
 
 ## 🌐 Live Demo
 
@@ -68,7 +72,9 @@ Feel free to reach out for collaborations or feedback:
 
 # 🎨 Rent an Art – Wypożyczalnia dzieł sztuki
 
-**Rent an Art** to fikcyjna aplikacja internetowa opracowana jako projekt dyplomowy na studiach. Głównym celem było zaprojektowanie intuicyjnego i estetycznego frontendu dla wypożyczalni dzieł sztuki, zbudowanego wyłącznie w technologiach frontendowych (HTML, CSS, JS) bez wsparcia frameworków backendowych.
+**Rent an Art** to fikcyjna aplikacja internetowa opracowana jako projekt dyplomowy na studiach.
+Głównym celem było zaprojektowanie intuicyjnego i estetycznego frontendu dla wypożyczalni dzieł sztuki, zbudowanego wyłącznie w technologiach frontendowych (HTML, CSS, JS), bez wsparcia frameworków backendowych.
+Aplikacja wykorzystuje Local Storage do przechowywania danych użytkownika, takich jak koszyk czy preferencje, co pozwala na zachowanie stanu między sesjami.
 
 Projekt stanowi część mojego portfolio frontendowego.
 
